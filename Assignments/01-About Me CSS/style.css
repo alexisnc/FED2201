@@ -3,7 +3,7 @@ footer{
     background-color: purple;
 }
 
-ol li: :nth-child(3){
+li:nth-child(3){
     color: red;
 }
 
@@ -56,4 +56,8 @@ nav a:hover{
     border-style:dotted;
     border:green;
     padding: 8px;
+}
+
+.class{
+    background-color:grey;
 }
