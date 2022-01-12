@@ -44,3 +44,9 @@ nav a:hover{
     color: white;
     background-color:green;
 }
+
+#Career{
+    font-family: fantasy;
+    color: blue;
+    text-decoration: underline;
+}
