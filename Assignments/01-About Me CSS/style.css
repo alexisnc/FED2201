@@ -4,7 +4,7 @@ footer{
 }
 
 ol li:third-child{
-    background-color: red;
+    color: red;
 }
 
 figure{
@@ -16,4 +16,14 @@ figure{
 nav{
     display:flex;
     flex-direction: column;
+}
+
+h3 > article{
+    background-color: salmon;
+}
+
+nav a:hover{
+    color: white;
+    text-decoration: underline;
+    background-color: violet;
 }
