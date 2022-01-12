@@ -18,7 +18,7 @@ nav{
     flex-direction: column;
 }
 
-h3 > article{
+article > i{
     background-color: salmon;
 }
 
