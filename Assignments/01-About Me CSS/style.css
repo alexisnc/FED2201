@@ -61,3 +61,8 @@ nav a:hover{
 .class{
     background-color:grey;
 }
+
+li, h3{
+    color:hotpink;
+    font-family: monospace;
+}
