@@ -1,0 +1,28 @@
+body{
+    background-color: #46240B;
+    color: #FFFFFF;
+}
+
+.flex-container, .left-panel, .middle-panel, .right-panel{
+    display:flex;
+}
+.left-panel{
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 350px;
+}
+
+.middle-panel{
+    justify-content: center;
+    flex-direction: column;
+    width: 
+
+}
+
+.right-panel{
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 350px;
+}
+
+.twitter-feed
