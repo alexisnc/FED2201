@@ -38,7 +38,8 @@ h2{
 }
 
 .button{
-    border-style:none;
+    border-style: solid;
+    border-width:1px;
     border-radius: 30px;
     width: 442px;
     height: 53px;

@@ -4,3 +4,11 @@ body{
 
     font-family: 'Righteous', cursive;
 }
+
+section{
+    width: 800px;
+    height: 800px;
+    background-color: #FFFFFF;
+    border-style: none;
+    border-radius: 30px;
+}
