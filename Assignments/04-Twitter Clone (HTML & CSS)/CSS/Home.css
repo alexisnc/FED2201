@@ -42,3 +42,12 @@ h2{
     font-size: 30px;
     font-family: 'Righteous', cursive;
 }
+
+img{
+    /* background-blend-mode:darken; */
+    mix-blend-mode: darken;
+}
+
+.pic{
+    backdrop-filter: blur(4);
+}
