@@ -131,3 +131,24 @@ a:hover{
     color: #FFFFFF;
     background-color: #E697e8;
 }
+
+@media (max-width: 425px){
+
+    .middle-panel{
+        width:425px;
+        margin: 0px;
+    }
+
+    .tweet-box{
+        width: 228px;
+    }
+    .left-panel{
+        width: 0px;
+        display:none;
+    }
+
+    .right-panel{
+        width: 0px;
+        display:none;
+    }
+}
