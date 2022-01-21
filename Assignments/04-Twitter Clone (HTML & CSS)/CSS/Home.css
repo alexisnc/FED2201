@@ -25,5 +25,20 @@ margin: 50px;
     flex-direction: column;
     align-items: center;
     width: 600px;
-    
+}
+
+h1{
+    font-size: 60px;
+}
+h2{
+    font-size: 50px;
+}
+
+.button{
+    border-style:none;
+    border-radius: 30px;
+    width: 442px;
+    height: 53px;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
 }
