@@ -3,7 +3,7 @@
 body{
     background-color: rgba(242, 117, 244, 0.63);
     font-family: 'Righteous', cursive;
-    margin:200px
+    margin:200px;
 }
 
 section{
@@ -54,7 +54,7 @@ h2{
     height: 53px;
     font-size: 30px;
     font-family: 'Righteous', cursive;
-    color: #46240B; 
+    color: rgba(70, 36, 11, 0.33);
     background-color: rgba(230, 151, 232, 0.34);
     margin: 10px;
 }
