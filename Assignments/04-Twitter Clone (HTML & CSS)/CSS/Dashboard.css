@@ -114,3 +114,15 @@ a:hover{
     border-radius: 30px;
     padding:10px;
 }
+
+.button{
+    background-color: #E697e8;
+    color:#FFFFFF;
+    border-style: none;
+    border-radius: 30px;
+    width: 50px;
+}
+
+.button:hover{
+    color:blue;
+}
