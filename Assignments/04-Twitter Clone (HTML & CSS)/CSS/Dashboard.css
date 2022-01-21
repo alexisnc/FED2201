@@ -14,6 +14,8 @@ body{
     flex-direction: column;
     width: 300px;
     margin: 10px;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
 }
 
 .middle-panel{
@@ -65,4 +67,16 @@ body{
 
 .material-icons .md-48{
     font-size: 48px; 
+}
+
+/* .nav{
+    padding-top: 20px;
+} */
+
+a{
+    color: #FFFFFF;
+}
+
+a:hover{
+    color:#E697e8;
 }
