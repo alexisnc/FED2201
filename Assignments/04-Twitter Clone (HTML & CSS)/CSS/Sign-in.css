@@ -34,6 +34,10 @@ h2{
     margin-top: 20px;
 }
 
+.brown-button:hover{
+    color:#E697e8;
+}
+
 .pink-button{
     border-style: solid;
     border-width:1px;

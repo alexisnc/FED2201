@@ -47,6 +47,10 @@ h2{
     font-family: 'Righteous', cursive;
 }
 
+#hover1:hover{
+    color:#E697e8;
+}
+
 .poop-pic{
     display:none
 }

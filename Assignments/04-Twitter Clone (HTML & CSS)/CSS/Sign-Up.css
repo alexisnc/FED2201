@@ -44,6 +44,10 @@ section{
     margin-top: 10px;
 }
 
+.brown-button:hover{
+    color:#E697e8;
+}
+
 h2{
     font-size: 40px;
     margin: 20px;
