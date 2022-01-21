@@ -24,9 +24,9 @@ body{
 }
 
 .right-panel{
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
-    width: 330px;
+    width: 300px;
     margin: 10px;
 }
 
@@ -57,9 +57,9 @@ body{
 .tweet-box{
     width: 500px;
     height: 100px;
-}
+} 
 
-.user-tweet{
+ .user-tweet{
     padding:20px;
 }
 
