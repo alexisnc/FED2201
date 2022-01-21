@@ -3,7 +3,7 @@
 body{
 background-color: rgba(242, 117, 244, 0.63);
 font-family: 'Righteous', cursive;
-margin: 50px;
+margin: 70px;
 }
 
 .home, .home-left, .home-right{
@@ -19,12 +19,15 @@ margin: 50px;
     border-style:none;
     border-radius: 30px;
     align-items: center;
+    justify-content: center;
     
 }
 .home-right{
     flex-direction: column;
     align-items: center;
     width: 600px;
+    justify-content: center;
+    margin:70px;
 }
 
 h1{
@@ -43,6 +46,10 @@ h2{
     font-family: 'Righteous', cursive;
 }
 
+.poop-pic{
+    display:none
+}
+
 img{
     /* background-blend-mode:darken; */
     mix-blend-mode: darken;
@@ -50,4 +57,41 @@ img{
 
 .pic{
     backdrop-filter: blur(4);
+}
+
+@media (max-width: 425px){
+    body{
+        margin: 0px;
+    }
+    .home-right{
+        display:none
+    }
+
+    .poop-pic{
+        display: flex;
+        justify-content: flex-start;
+        height: 200px;
+        width: 200px;
+        mix-blend-mode: darken;
+        background-color:rgba(242, 117, 244, 0.63)
+    }
+
+    .home-left{
+        width: 500px;
+        height: 1050px;
+        margin:0px;
+        border-radius: 0px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+
+    .button{
+        width: 320px;
+        height: 48px;
+    }
 }
