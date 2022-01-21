@@ -126,3 +126,8 @@ a:hover{
 .button:hover{
     color:blue;
 }
+
+.icon-button{
+    color: #FFFFFF;
+    background-color: #E697e8;
+}
