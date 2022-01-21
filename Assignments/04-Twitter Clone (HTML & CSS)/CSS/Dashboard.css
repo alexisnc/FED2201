@@ -57,9 +57,10 @@ body{
 }
 
 .tweet-box{
-    width: 500px;
+    width: 550px;
     height: 100px;
     opacity: 0.5;
+    margin: 10px;
     
 } 
 
@@ -69,6 +70,7 @@ body{
     border-color:#E697e8;
     border-top: 10px;
     border-bottom: 10px;
+    
 }
 
 .material-icons .md-48{
@@ -103,4 +105,12 @@ a:hover{
     border-radius: 30px;
     padding: 20px;
     height: 300px;
+}
+
+.search{
+    border-style:solid;
+    border-width: 10px;
+    border-color:#E697e8;
+    border-radius: 30px;
+    padding:10px;
 }
