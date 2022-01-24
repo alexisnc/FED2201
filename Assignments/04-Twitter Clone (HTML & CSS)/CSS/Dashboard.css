@@ -14,6 +14,8 @@ body{
     flex-direction: column;
     width: 300px;
     margin: 10px;
+    position: sticky;
+    left: 0;
     /* padding-top: 20px;
     padding-bottom: 20px; */
 }
@@ -77,9 +79,10 @@ body{
     font-size: 48px; 
 }
 
-/* .nav{
-    padding-top: 20px;
-} */
+.nav{
+    position: sticky;
+    left: 0;
+}
 
 a{
     color: #FFFFFF;
