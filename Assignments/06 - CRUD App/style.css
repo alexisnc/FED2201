@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: salmon;
+    margin: 40px;
+}
+
+table{
+    width: 60%;
+    background:rgb(136, 135, 138);
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+td{
+    border: 2px solid white;
+    padding: 20px;
+}
+
+div{
+    padding: 10px;
+}
+
+#state{
+    width: 35px;
+}
+
+#zip{
+    width: 57px; 
+}
+
+input[type="text"], input[type="email"], input[type="number"]{
+    border-radius: 3px;
+}
+
+th{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+}
