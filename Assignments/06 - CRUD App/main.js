@@ -23,7 +23,6 @@ function readFormData(){
     formData["zip"] = document.getElementById("zip").value;
     formData["dob"] = document.getElementById("dob").value;
     return formData;
-    console.log(readFormData());
 }
 
 function createNewData(data){
@@ -48,7 +47,8 @@ function createNewData(data){
     var cell9 = newRow.insertCell(8);
         cell9.innerHTML = data.dob;   
     var cell10 = newRow.insertCell(9);
-        cell10.innerHTML = `<button onClick='onEdit(this)'>Edit</button> <button onClick='onDelete(this)'>Delete</button>`;     
+        cell10.innerHTML = `<button onClick='onEdit(this)'>Edit</button> <button onClick='onDelete(this)'>Delete</button>`;
+    bringSquare();     
 }
 
 function onEdit(td){
@@ -62,6 +62,7 @@ function onEdit(td){
     document.getElementById('state').value = selectedRow.cells[6].innerHTML;
     document.getElementById('zip').value = selectedRow.cells[7].innerHTML;
     document.getElementById('dob').value = selectedRow.cells[8].innerHTML;
+    rotateSquare();
 }
 
 function updateData(formData){
@@ -76,12 +77,13 @@ function updateData(formData){
     selectedRow.cells[8].innerHTML = formData.dob;
 }
 
-function onDelete(){
+function onDelete(td){
     if(confirm('Are you sure you want to delete this?')){
         row = td.parentElement.parentElement;
         document.getElementById('personList').deleteRow(row.rowIndex);
     }
     resetForm();
+     fadeSquare();
 }
 
 function resetForm(){
@@ -94,4 +96,19 @@ function resetForm(){
     document.getElementById('state').value = '';
     document.getElementById('zip').value = '';
     document.getElementById('dob').value = '';
+}
+
+function rotateSquare(){
+    var square = document.getElementById('square');
+    square.style.rotate = '20deg';
+}
+
+function fadeSquare(){
+    var square1 = document.getElementByTagId('square');
+    square1.style.opacity = '0';
+}
+
+function bringSquare(){
+    var square2 = document.getElementById('square');
+    square2.style.opacity = '3';
 }
