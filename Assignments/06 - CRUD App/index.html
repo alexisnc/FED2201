@@ -13,7 +13,7 @@
     <table>
         <tr>
             <td>
-                <form autocomplete="on" onsubmit="onFormSubmit()">
+                <form autocomplete="off" onsubmit="onFormSubmit()">
                     <div>
                         <label for="firstName">First Name</label>
                         <input type="text" placeholder="First Name" id="firstName" required>
@@ -55,23 +55,25 @@
                         <input type="reset" value="Reset">
                     </div>
                 </form>
-                <td>
+                <tr>
                     <table class="list" id="personList">
                         <thead>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>ZIP</th>
-                            <th>DOB</th>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>ZIP</th>
+                                <th>DOB</th>
+                            </tr>
                         </thead>
                         <tbody>
 
                         </tbody>
                     </table>
-                </td>
+                </tr>
             </td>
         </tr>
     </table>
