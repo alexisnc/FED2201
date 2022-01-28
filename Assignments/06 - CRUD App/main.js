@@ -5,7 +5,10 @@ function onFormSubmit(){
     if(selectedRow === null){
         createNewData(formData);
     }
-    else{}
+    else{
+        updateRecord(formData);
+    }
+    resetForm();
 };
 
 function readFormData(){
@@ -45,7 +48,7 @@ function createNewData(data){
     var cell9 = newRow.insertCell(8);
         cell9.innerHTML = data.dob;   
     var cell10 = newRow.insertCell(9);
-        cell10.innerHTML = `<button onClick='onEdit(this)>Edit</button> <button>Delete</button>`;     
+        cell10.innerHTML = `<button onClick='onEdit(this)'>Edit</button> <button onClick='onDelete(this)'>Delete</button>`;     
 }
 
 function onEdit(td){
@@ -71,4 +74,24 @@ function updateData(formData){
     selectedRow.cells[6].innerHTML = formData.state;
     selectedRow.cells[7].innerHTML = formData.zip;
     selectedRow.cells[8].innerHTML = formData.dob;
+}
+
+function onDelete(){
+    if(confirm('Are you sure you want to delete this?')){
+        row = td.parentElement.parentElement;
+        document.getElementById('personList').deleteRow(row.rowIndex);
+    }
+    resetForm();
+}
+
+function resetForm(){
+    document.getElementById('firstName').value = '';
+    document.getElementById('middleName').value = '';
+    document.getElementById('lastName').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('address').value = '';
+    document.getElementById('city').value = '';
+    document.getElementById('state').value = '';
+    document.getElementById('zip').value = '';
+    document.getElementById('dob').value = '';
 }
