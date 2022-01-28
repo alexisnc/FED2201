@@ -45,7 +45,7 @@ function createNewData(data){
     var cell9 = newRow.insertCell(8);
         cell9.innerHTML = data.dob;   
     var cell10 = newRow.insertCell(9);
-        cell10.innerHTML = `<button>Edit</button> <button>Delete</button>`;     
+        cell10.innerHTML = `<button onClick='onEdit(this)>Edit</button> <button>Delete</button>`;     
 }
 
 function onEdit(td){
@@ -59,4 +59,16 @@ function onEdit(td){
     document.getElementById('state').value = selectedRow.cells[6].innerHTML;
     document.getElementById('zip').value = selectedRow.cells[7].innerHTML;
     document.getElementById('dob').value = selectedRow.cells[8].innerHTML;
+}
+
+function updateData(formData){
+    selectedRow.cells[0].innerHTML = formData.firstName;
+    selectedRow.cells[1].innerHTML = formData.middleName;
+    selectedRow.cells[2].innerHTML = formData.lastName;
+    selectedRow.cells[3].innerHTML = formData.email;
+    selectedRow.cells[4].innerHTML = formData.address;
+    selectedRow.cells[5].innerHTML = formData.city;
+    selectedRow.cells[6].innerHTML = formData.state;
+    selectedRow.cells[7].innerHTML = formData.zip;
+    selectedRow.cells[8].innerHTML = formData.dob;
 }
