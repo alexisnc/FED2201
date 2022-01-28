@@ -47,3 +47,16 @@ function createNewData(data){
     var cell10 = newRow.insertCell(9);
         cell10.innerHTML = `<button>Edit</button> <button>Delete</button>`;     
 }
+
+function onEdit(td){
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById('firstName').value = selectedRow.cells[0].innerHTML;
+    document.getElementById('middleName').value = selectedRow.cells[1].innerHTML;
+    document.getElementById('lastName').value = selectedRow.cells[2].innerHTML;
+    document.getElementById('email').value = selectedRow.cells[3].innerHTML;
+    document.getElementById('address').value = selectedRow.cells[4].innerHTML;
+    document.getElementById('city').value = selectedRow.cells[5].innerHTML;
+    document.getElementById('state').value = selectedRow.cells[6].innerHTML;
+    document.getElementById('zip').value = selectedRow.cells[7].innerHTML;
+    document.getElementById('dob').value = selectedRow.cells[8].innerHTML;
+}

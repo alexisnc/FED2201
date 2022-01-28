@@ -10,10 +10,13 @@ table{
     width: 60%;
     background:rgb(136, 135, 138);
     margin: 20px;
-    display: flex;
-    justify-content: flex-start;
+    /* display: flex;
+    justify-content: flex-start; */
 }
 
+table.list{
+    text-align: center;
+}
 
 
 td{
@@ -37,8 +40,3 @@ input[type="text"], input[type="email"], input[type="number"]{
     border-radius: 3px;
 }
 
-/* th{
-    display:flex;
-    align-items: space-between;
-    padding: 10px;
-} */
