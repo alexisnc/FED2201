@@ -1,0 +1,20 @@
+{
+    "cars": [
+        {
+            "make": "Kia",
+            "model": "Optima",
+            "year": 2016,
+            "isDrivable": true
+        },
+        {
+            "make": "Toyota",
+            "model": "Camry",
+            "year": 2016
+        },
+        {
+            "make": "Honda",
+            "model": "Civic",
+            "year": 2016
+        }
+    ]
+}
