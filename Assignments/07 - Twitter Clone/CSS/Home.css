@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body{
+background-color: rgba(242, 117, 244, 0.63);
+font-family: 'Righteous', cursive;
+margin: 70px;
+}
+
+.home, .home-left, .home-right{
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.home-left{
+    background-color: #ffffff;
+    width: 600px;
+    height: 800px;
+    flex-direction: column;
+    border-style:none;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.home-right{
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    justify-content: center;
+    margin:70px;
+}
+
+h1{
+    font-size: 60px;
+}
+h2{
+    font-size: 50px;
+}
+
+.button{
+    border-style: solid;
+    border-width:1px;
+    border-radius: 30px;
+    width: 442px;
+    height: 53px;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+}
+
+#hover1:hover{
+    color:#E697e8;
+}
+
+.poop-pic{
+    display:none
+}
+
+img{
+    /* background-blend-mode:darken; */
+    mix-blend-mode: darken;
+}
+
+.pic{
+    backdrop-filter: blur(4);
+}
+
+@media (max-width: 425px){
+    body{
+        margin: 0px;
+    }
+    .home-right{
+        display:none
+    }
+
+    .poop-pic{
+        display: flex;
+        justify-content: flex-start;
+        height: 200px;
+        width: 200px;
+        mix-blend-mode: darken;
+        background-color:rgba(242, 117, 244, 0.63)
+    }
+
+    .home-left{
+        width: 500px;
+        height: 1050px;
+        margin:0px;
+        border-radius: 0px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+
+    .button{
+        width: 320px;
+        height: 48px;
+    }
+}

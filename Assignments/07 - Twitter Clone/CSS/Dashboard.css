@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+body{
+    background-color: #46240B;
+    color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.flex-container, .left-panel, .middle-panel, .right-panel{
+    display:flex;
+}
+.left-panel{
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 300px;
+    margin: 10px;
+    position: sticky;
+    left: 0;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+}
+
+.middle-panel{
+    justify-content: center;
+    flex-direction: column;
+    width: 740px;
+    margin: 10px;
+}
+
+.right-panel{
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 300px;
+    margin: 10px;
+}
+
+.twitter-feed-middle{
+    border-style: solid;
+    border-width: 5px 10px;
+    border-color: #E697e8;
+    padding: 20px;
+    
+}
+
+.twitter-feed-top{
+    border-style: solid;
+    border-color:#E697e8;
+    border-width: 10px 10px 5px 10px;
+    padding: 20px;
+   
+}
+
+.twitter-feed-bottom{
+    border-style: solid;
+    border-color:#E697e8;
+    border-width: 5px 10px 10px 10px;
+    padding: 20px;
+
+}
+
+.tweet-box{
+    width: 550px;
+    height: 100px;
+    opacity: 0.5;
+    margin: 10px;
+    
+} 
+
+ .user-tweet{
+    padding:20px;
+    border-style: solid;
+    border-color:#E697e8;
+    border-top: 10px;
+    border-bottom: 10px;
+    
+}
+
+.material-icons .md-48{
+    font-size: 48px; 
+}
+
+.nav{
+    position: sticky;
+    left: 0;
+}
+
+a{
+    color: #FFFFFF;
+}
+
+a:hover{
+    color:#E697e8;
+}
+
+.follow-box{
+    border-style:solid;
+    border-width: 10px;
+    border-color:#E697e8;
+    border-radius: 30px;
+    padding: 20px;
+    height: 300px;
+}
+
+.happening-box{
+    border-style:solid;
+    border-width: 10px;
+    border-color:#E697e8;
+    border-radius: 30px;
+    padding: 20px;
+    height: 300px;
+}
+
+.search{
+    border-style:solid;
+    border-width: 10px;
+    border-color:#E697e8;
+    border-radius: 30px;
+    padding:10px;
+}
+
+.button{
+    background-color: #E697e8;
+    color:#FFFFFF;
+    border-style: none;
+    border-radius: 30px;
+    width: 50px;
+}
+
+.button:hover{
+    color:blue;
+}
+
+.icon-button{
+    color: #FFFFFF;
+    background-color: #E697e8;
+}
+
+@media (max-width: 425px){
+
+    .middle-panel{
+        width:425px;
+        margin: 0px;
+    }
+
+    .tweet-box{
+        width: 228px;
+    }
+    .left-panel{
+        width: 0px;
+        display:none;
+    }
+
+    .right-panel{
+        width: 0px;
+        display:none;
+    }
+}

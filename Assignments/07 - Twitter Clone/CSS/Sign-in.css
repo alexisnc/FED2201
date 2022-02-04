@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body{
+    background-color: rgba(242, 117, 244, 0.63);
+    font-family: 'Righteous', cursive;
+    margin:200px;
+}
+
+section{
+    width: 1000px;
+    height: 800px;
+    background-color: #FFFFFF;
+    border-style: none;
+    border-radius: 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    font-size: 40px;
+}
+
+.brown-button{
+    border-style:none;
+    border-radius: 30px;
+    width: 442px;
+    height: 53px;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+    color: #FFFFFF;
+    background-color: #46240B;
+    margin-top: 20px;
+}
+
+.brown-button:hover{
+    color:#E697e8;
+}
+
+.pink-button{
+    border-style: solid;
+    border-width:1px;
+    border-radius: 30px;
+    width: 442px;
+    height: 53px;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+    color: #46240B; 
+    background-color: rgba(230, 151, 232, 0.34);
+    margin: 20px;
+}
+
+.input-box{
+    border-style: solid;
+    border-width: 4px;
+    width: 442px;
+    height: 53px;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+    color: rgba(70, 36, 11, 0.33);
+    background-color: rgba(230, 151, 232, 0.34);
+    margin: 10px;
+}
+
+.poop{
+    background-color: rgba(242, 117, 244, 0.63);
+}
+
+@media (max-width: 425px){
+    body{
+        margin: 0px;
+    }
+
+    section{
+        width: 500px;
+        height: 1300px;
+        margin:0px;
+        border-radius: 0px;
+    }
+
+    .pink-button{
+        width: 320px;
+        height: 48px;
+    }
+
+    .brown-button{
+        width: 320px;
+        height: 48px;
+    }
+}
