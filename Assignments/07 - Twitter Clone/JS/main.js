@@ -33,13 +33,14 @@ function getUser(){
 }   
 
 $("#signIn").click((e) => {
-    getUser()
+    getUser(user)
+
     show($("#middle-panel"))
     hide($("#sign-in"), $("#sign-up"), $("#homepage"))
 })
 
 function postUser(){    
-    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: `${extreme}`, username: `${ice}`}))
+    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: "Angel", username: "Angel3"}))
     .then((data) => {
         console.dir(data)
         console.log(data)
@@ -47,7 +48,7 @@ function postUser(){
 }
 
 $("#signUp").click((e) => {
-    // e.preventDefault()
+     e.preventDefault()
     console.log("user signed in")
     postUser()
     show($("#sign-in"))
@@ -90,6 +91,10 @@ $("#logout").click((e) => {
     let loggedOutUser = $("#user-logout").val()
     e.preventDefault()
     deleteUser(loggedOutUser)
+    show(document.querySelector('.home'));
+    hide(document.querySelector('#sign-in'))
+    hide(document.getElementById("#sign-up"))
+    hide(document.getElementById("#dashboard"))
 })
 
 })
