@@ -5,6 +5,18 @@ $(document).ready(() => {
 var finalFirebase;    
 var currentUsers = []
 
+
+var extreme = $("#name").val()
+var  ice = $("#username").val()
+
+const hide = (elem) => {
+    elem.style.display = 'none'
+}
+
+const show = (elem) => {
+    elem.style.display = 'block'
+}
+
 function getUser(){
     $.get(`${firebaseUrl}/users${jsonExt}`)
     .then((data) => {
@@ -28,7 +40,7 @@ $("#signIn").click((e) => {
     })
 
 function postUser(){    
-    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: "Angel", username: "angel3"}))
+    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: `${extreme}`, username: `${ice}`}))
     .then((data) => {
         console.dir(data)
         console.log(data)

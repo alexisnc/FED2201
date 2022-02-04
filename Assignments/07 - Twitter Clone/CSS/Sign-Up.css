@@ -6,7 +6,7 @@ body{
     margin:200px;
 }
 
-section{
+#sign-up{
     width: 1000px;
     height: 800px;
     background-color: #FFFFFF;
@@ -58,7 +58,7 @@ h2{
         margin: 0px;
     }
 
-    section{
+    #sign-up{
         width: 500px;
         height: 1300px;
         margin:0px;

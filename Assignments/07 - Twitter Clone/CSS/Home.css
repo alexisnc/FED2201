@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-body{
+#hompage{
 background-color: rgba(242, 117, 244, 0.63);
 font-family: 'Righteous', cursive;
 margin: 70px;
@@ -72,17 +72,18 @@ img{
         display:none
     }
 
+
+
     .poop-pic{
         display: flex;
         justify-content: flex-start;
         height: 200px;
         width: 200px;
         mix-blend-mode: darken;
-        background-color:rgba(242, 117, 244, 0.63)
     }
 
     .home-left{
-        width: 500px;
+        width: 550px;
         height: 1050px;
         margin:0px;
         border-radius: 0px;
