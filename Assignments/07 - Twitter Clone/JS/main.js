@@ -17,6 +17,7 @@ const show = (elem) => {
     elem.style.display = 'block'
 }
 
+//Read Functionality
 function getUser(){
     $.get(`${firebaseUrl}/users${jsonExt}`)
     .then((data) => {
@@ -33,11 +34,9 @@ function getUser(){
 
 $("#signIn").click((e) => {
     getUser()
+    show($("#middle-panel"))
+    hide($("#sign-in"), $("#sign-up"), $("#homepage"))
 })
-    $.get(`${firebaseUrl}/users${jsonExt}`)
-    .then((data) => {
-        console.dir(data)
-    })
 
 function postUser(){    
     $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: `${extreme}`, username: `${ice}`}))
@@ -48,11 +47,15 @@ function postUser(){
 }
 
 $("#signUp").click((e) => {
-    e.preventDefault()
+    // e.preventDefault()
     console.log("user signed in")
     postUser()
+    show($("#sign-in"))
+    hide($("#homepage"), $("#dashboard"), $("#sign-up"))
 })
 
+
+//delete functionality
 function deleteUser(){
     //make sure user exists
     let foundUser = currentUsers.find(user => user.username === username)
