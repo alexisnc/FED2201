@@ -6,8 +6,6 @@ var finalFirebase;
 var currentUsers = []
 
 
-var extreme = $("#name").val()
-var  ice = $("#username").val()
 
 const hide = (elem) => {
     elem.style.display = 'none'
@@ -95,6 +93,12 @@ $("#logout").click((e) => {
     hide(document.querySelector('#sign-in'))
     hide(document.getElementById("#sign-up"))
     hide(document.getElementById("#dashboard"))
+})
+
+$("#flush").click((e) => {
+    e.preventDefault()
+    postTweet()
+    $(".user-tweet").prepend("<article></article>")
 })
 
 })

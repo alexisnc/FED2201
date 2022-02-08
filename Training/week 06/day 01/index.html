@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liveshare - Week 06 Day 01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Liveshare - Week 06 Day 01</h1>
+
+    <table id="foodEntriesTable">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>TEMPERATURE</th>
+            <th>INGREDIENTS</th>
+            <th>CUISINE</th>
+        </tr>
+    </table>
+
+    <form>
+
+        <div class="inputField">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="nameInput" placeholder="Name" />
+        </div>
+
+        <div class="inputField">
+            <label for="temperature">Temperature</label>
+            <input type="text" name="temperature" id="temperatureInput" placeholder="Temperature" />
+        </div>
+
+        <div class="inputField">
+            <label for="ingredients">Ingredients</label>
+            <input type="text" name="ingredients" id="ingredientsInput"
+                placeholder="Ingredients (separated by commas)" />
+        </div>
+
+        <div class="inputField">
+            <label for="cuisine">Cuisine</label>
+            <input type="text" name="cuisine" id="cuisineInput" placeholder="Cuisine" />
+        </div>
+
+        <input type="submit" value="Submit" id="submitFoodEntry">
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
