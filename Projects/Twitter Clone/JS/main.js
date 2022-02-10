@@ -7,13 +7,7 @@ var currentUsers = []
 
 
 
-const hide = (elem) => {
-    elem.style.display = 'none'
-}
 
-const show = (elem) => {
-    elem.style.display = 'block'
-}
 
 //Read Functionality
 function getUser(){
@@ -33,9 +27,6 @@ function getUser(){
 
 $("#signIn").click((e) => {
     getUser(user)
-
-    show($("#middle-panel"))
-    hide($("#sign-in"), $("#sign-up"), $("#homepage"))
 })
 
 function postUser(name, username, email){    
@@ -49,9 +40,6 @@ function postUser(name, username, email){
 $("#signUp").click((e) => {
      e.preventDefault()
     console.log("user signed in")
-    postUser(nme)
-    show($("#sign-in"))
-    hide($("#homepage"), $("#dashboard"), $("#sign-up"))
 })
 
 
@@ -87,13 +75,8 @@ function deleteUser(){
 }
 
 $("#logout").click((e) => {
-    let loggedOutUser = $("#user-logout").val()
     e.preventDefault()
-    deleteUser(loggedOutUser)
-    show(document.querySelector('.home'));
-    hide(document.querySelector('#sign-in'))
-    hide(document.getElementById("#sign-up"))
-    hide(document.getElementById("#dashboard"))
+   
 })
 
 $("#flush").click((e) => {
