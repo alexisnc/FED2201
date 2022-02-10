@@ -37,8 +37,8 @@ $("#signIn").click((e) => {
     hide($("#sign-in"), $("#sign-up"), $("#homepage"))
 })
 
-function postUser(){    
-    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: "Angel", username: "Angel3"}))
+function postUser(name, username, email){    
+    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: name, username: username, email:email}))
     .then((data) => {
         console.dir(data)
         console.log(data)
@@ -48,7 +48,7 @@ function postUser(){
 $("#signUp").click((e) => {
      e.preventDefault()
     console.log("user signed in")
-    postUser()
+    postUser(nme)
     show($("#sign-in"))
     hide($("#homepage"), $("#dashboard"), $("#sign-up"))
 })
