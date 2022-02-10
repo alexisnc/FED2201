@@ -24,7 +24,8 @@ function getUser(){
         currentUsers.push({
             id: user,
             name: data[user].name,
-            username: data[user].username
+            username: data[user].username,
+            email: data[user].email
         })
     }
     })
