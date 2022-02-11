@@ -5,7 +5,11 @@ $(document).ready(() => {
 var finalFirebase;    
 var currentUsers = []
 
-
+var signInNameInput = $("#signInNameInput")
+var signInUsernameInput = $("#signInUsernameInput")
+var signUpNameInput = $("#signUpNameInput")
+var signUpUsernameInput = $("#signUpUsernameInput")
+var signUpEmailInput = $("#signUpEmailInput")
 
 
 
@@ -29,17 +33,26 @@ $("#signIn").click((e) => {
     getUser(user)
 })
 
-function postUser(name, username, email){    
-    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({name: name, username: username, email:email}))
+function signUpUser(signUpName, signUpUsername, email){ 
+    
+    let signUpName = signUpNameInput.val()
+    let signUpUsername = signUpUsernameInput.val()
+    let email = signUpEmailInput.val()
+
+    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({
+        name: signUpName, 
+        username: signUpUsername, 
+        email:email}))
     .then((data) => {
         console.dir(data)
         console.log(data)
     })
 }
 
-$("#signUp").click((e) => {
+$("#signUpButton").click((e) => {
      e.preventDefault()
     console.log("user signed in")
+    signUpUser()
 })
 
 
