@@ -32,7 +32,7 @@ function signInUser(){
         })
     }
     })
-    if(signInUsernameInput.val() == data[user].username){
+    if(signInUsernameInput.val() === data[user].username){
         $("#dashboard").show()
         $("#homepage").hide()
         $("#sign-up").hide()
