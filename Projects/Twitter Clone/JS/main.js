@@ -11,10 +11,12 @@ var signUpNameInput = $("#signUpNameInput")
 var signUpUsernameInput = $("#signUpUsernameInput")
 var signUpEmailInput = $("#signUpEmailInput")
 
-$("#homepage").show()
-$("#dashboard").hide()
-$("#sign-up").hide()
-$("#sign-in").hide()
+var tweetBoxInput = $("#tweet-box")
+
+// $("#homepage").show()
+// $("#dashboard").hide()
+// $("#sign-up").hide()
+// $("#sign-in").hide()
 
 //Read Functionality
 function signInUser(){
@@ -55,60 +57,62 @@ $("#signIn").click((e) => {
     }
 })
 
-// function signUpUser(signUpName, signUpUsername, email){ 
+function signUpUser(){ 
     
-//     let signUpName = signUpNameInput.val()
-//     let signUpUsername = signUpUsernameInput.val()
-//     let email = signUpEmailInput.val()
+    let signUpName = signUpNameInput.val()
+    let signUpUsername = signUpUsernameInput.val()
+    let email = signUpEmailInput.val()
 
-//     $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({
-//         name: signUpName, 
-//         username: signUpUsername, 
-//         email: email}))
-//     .then((data) => {
-//         console.dir(data)
-//         console.log(data)
-//     })
-// }
+    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({
+        name: signUpName, 
+        username: signUpUsername, 
+        email: email}))
+    .then((data) => {
+        console.dir(data)
+        console.log(data)
+    })
+}
 
 $("#signUpButton").click((e) => {
      e.preventDefault()
     console.log("user signed in")
     signUpUser()
-
+    signUpNameInput.val() = ''
+    signUpUsernameInput.val() = ''
+    signUpEmailInput.val() = ''
 })
 
 
 //delete functionality
-function deleteUser(){
-    //make sure user exists
-    let foundUser = currentUsers.find(user => user.username === username)
+// function deleteUser(){
+//     //make sure user exists
+//     let foundUser = currentUsers.find(user => user.username === username)
     
-    if (foundUser !== undefined){
-        console.log(`user: ${username} found!`)
-        $.ajax({
-            url: `${firebaseUrl}/users${jsonExt}/$`,
-            type: "DELETE",
-            success: console.log(`DELETE was successful`)
-        }).then(
-            $.get(`${firebaseUrl}/users/${jsonExt}`)
-        .then((data) => {
-            // console.dir(data)
-            // finalFirebase = data
-            // console.dir(data)
-            // for (user in finalFirebase) {
-            //     currentUsers.push({
-            //         id:user,
-            //         name: data[user].name,
-            //         username: data[user].username
-            //     })
-            // }
-        }).then(console.log(currentUsers)) 
-        )
-    }else{
-        console.log(`user: ${username} CANNOT be found!`)
-    }
-}
+//     if (foundUser !== undefined){
+//         console.log(`user: ${username} found!`)
+//         $.ajax({
+//             url: `${firebaseUrl}/users${jsonExt}/$`,
+//             type: "DELETE",
+//             success: console.log(`DELETE was successful`)
+//         }).then(
+//             $.get(`${firebaseUrl}/users/${jsonExt}`)
+//         .then((data) => {
+//             // console.dir(data)
+//             // finalFirebase = data
+//             // console.dir(data)
+//             // for (user in finalFirebase) {
+//             //     currentUsers.push({
+//             //         id:user,
+//             //         name: data[user].name,
+//             //         username: data[user].username
+//             //     })
+//             // }
+//         }).then(console.log(currentUsers)) 
+//         )
+//     }else{
+//         console.log(`user: ${username} CANNOT be found!`)
+//     }
+// }
 
 $("#logoutButton").click((e) => {
     e.preventDefault()
@@ -135,13 +139,27 @@ $("#home-sign-in").click((e) => {
 })
 
 function postTweet(){
-    $.post(`${firebaseUrl}/tweets/${jsonExt}`), JSON.stringify({text:"", tweetID:"", userID: ""})
+    let tweetBox = tweetBoxInput.val() 
+
+    $.post(`${firebaseUrl}/tweets/${jsonExt}`), JSON.stringify({text: tweetBox, tweetID:"", userID: foundUser})
 }
 
 $("#flush").click((e) => {
     e.preventDefault()
     postTweet()
-    $(".user-tweet").prepend("<article></article>")
+    $("#user-tweet").prepend(`
+    <div id="user-tweet" class="user-tweet">
+                    
+                    <span class="material-icons-outlined md-48" style="font-size: 48px;">
+                        account_circle
+                        </span>
+                    <input id="tweet-box" class="tweet-box" type="text" placeholder="Dump your thoughts">
+                    <button id="flush" class="button">Flush</button>
+                    <button class="icon-button"><span class="material-icons-outlined">delete</span></button>
+                    <button class="icon-button"><span class="material-icons-outlined">favorite_border</span></button>
+                    <button class="icon-button"><span class="material-icons-outlined">share</span></button>
+                </div>
+    `)
 })
 
 })
