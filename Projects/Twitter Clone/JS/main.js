@@ -11,7 +11,10 @@ var signUpNameInput = $("#signUpNameInput")
 var signUpUsernameInput = $("#signUpUsernameInput")
 var signUpEmailInput = $("#signUpEmailInput")
 
-
+$("#homepage").show()
+$("#dashboard").hide()
+$("#sign-up").hide()
+$("#sign-in").hide()
 
 //Read Functionality
 function signInUser(){
