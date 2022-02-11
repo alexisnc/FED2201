@@ -90,16 +90,16 @@ function deleteUser(){
         }).then(
             $.get(`${firebaseUrl}/users/${jsonExt}`)
         .then((data) => {
-            console.dir(data)
-            finalFirebase = data
-            console.dir(data)
-            for (user in finalFirebase) {
-                currentUsers.push({
-                    id:user,
-                    name: data[user].name,
-                    username: data[user].username
-                })
-            }
+            // console.dir(data)
+            // finalFirebase = data
+            // console.dir(data)
+            // for (user in finalFirebase) {
+            //     currentUsers.push({
+            //         id:user,
+            //         name: data[user].name,
+            //         username: data[user].username
+            //     })
+            // }
         }).then(console.log(currentUsers)) 
         )
     }else{
@@ -109,7 +109,10 @@ function deleteUser(){
 
 $("#logout").click((e) => {
     e.preventDefault()
-   
+    $("#homepage").show()
+    $("#dashboard").hide()
+    $("#sign-up").hide()
+    $("#sign-in").hide()
 })
 
 function postTweet(){
