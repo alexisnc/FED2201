@@ -14,7 +14,7 @@ var signUpEmailInput = $("#signUpEmailInput")
 
 
 //Read Functionality
-function getUser(){
+function signInUser(){
     $.get(`${firebaseUrl}/users${jsonExt}`)
     .then((data) => {
         console.dir(data)
@@ -30,7 +30,26 @@ function getUser(){
 }   
 
 $("#signIn").click((e) => {
-    getUser(user)
+    e.preventDefault()
+    signInUser()
+    let foundUser = currentUsers.find(user => user.username === username)
+    //user exists so let them sign in
+    if(foundUser !== null ){
+        //redirect to dashboard 
+        $("#dashboard").show()
+        $("#homepage").hide()
+        $("#sign-up").hide()
+        $("#sign-in").hide()
+    }
+    //user doesn't exist redirect to sign up page 
+    else{
+        alert("Please Sign Up")
+        //show sign up page
+        $("#sign-up").show()
+        $("#sign-in").hide()
+        $("#dashboard").hide()
+        $("#homepage").hide()
+    }
 })
 
 function signUpUser(signUpName, signUpUsername, email){ 
@@ -42,7 +61,7 @@ function signUpUser(signUpName, signUpUsername, email){
     $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({
         name: signUpName, 
         username: signUpUsername, 
-        email:email}))
+        email: email}))
     .then((data) => {
         console.dir(data)
         console.log(data)
@@ -53,6 +72,7 @@ $("#signUpButton").click((e) => {
      e.preventDefault()
     console.log("user signed in")
     signUpUser()
+
 })
 
 
@@ -91,6 +111,10 @@ $("#logout").click((e) => {
     e.preventDefault()
    
 })
+
+function postTweet(){
+    $.post(`${firebaseUrl}/tweets/${jsonExt}`), JSON.stringify({text:"", tweetID:"", userID: ""})
+}
 
 $("#flush").click((e) => {
     e.preventDefault()
