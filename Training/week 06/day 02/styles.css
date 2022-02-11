@@ -1,0 +1,17 @@
+table {   
+    margin: 5%;
+    border: black solid 1px;
+}
+
+.inputField {
+    display: flex;
+}
+
+/* .ingredients ul {
+    display: flex;
+    flex-flow: wrap; 
+} */
+
+td {
+    border: 1px solid darkblue;
+}
