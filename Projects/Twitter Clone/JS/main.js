@@ -32,6 +32,21 @@ function signInUser(){
         })
     }
     })
+    if(signInUsernameInput.val() == data[user].username){
+        $("#dashboard").show()
+        $("#homepage").hide()
+        $("#sign-up").hide()
+        $("#sign-in").hide()
+        console.log("user found! Dump freely!")
+    }
+    else{
+        alert("Username not found. Please Sign Up")
+        $("#dashboard").hide()
+        $("#homepage").hide()
+        $("#sign-up").show()
+        $("#sign-in").hide()
+        console.log("user needs to sign up")
+    }
 }   
 
 $("#signIn").click((e) => {
@@ -73,13 +88,21 @@ function signUpUser(){
     })
 }
 
+function resetSignUp(){
+    signUpNameInput.val() = '';
+    signUpEmailInput.val() = '';
+    signUpEmailInput.val() = '';
+}
+
 $("#signUpButton").click((e) => {
      e.preventDefault()
     console.log("user signed in")
     signUpUser()
-    signUpNameInput.val() = ''
-    signUpUsernameInput.val() = ''
-    signUpEmailInput.val() = ''
+    resetSignUp()
+    $("#homepage").hide()
+    $("#dashboard").show()
+    $("#sign-up").hide()
+    $("#sign-in").hide()
 })
 
 
