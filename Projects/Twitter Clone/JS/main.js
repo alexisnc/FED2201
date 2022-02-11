@@ -52,21 +52,21 @@ $("#signIn").click((e) => {
     }
 })
 
-function signUpUser(signUpName, signUpUsername, email){ 
+// function signUpUser(signUpName, signUpUsername, email){ 
     
-    let signUpName = signUpNameInput.val()
-    let signUpUsername = signUpUsernameInput.val()
-    let email = signUpEmailInput.val()
+//     let signUpName = signUpNameInput.val()
+//     let signUpUsername = signUpUsernameInput.val()
+//     let email = signUpEmailInput.val()
 
-    $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({
-        name: signUpName, 
-        username: signUpUsername, 
-        email: email}))
-    .then((data) => {
-        console.dir(data)
-        console.log(data)
-    })
-}
+//     $.post(`${firebaseUrl}/users/${jsonExt}`, JSON.stringify({
+//         name: signUpName, 
+//         username: signUpUsername, 
+//         email: email}))
+//     .then((data) => {
+//         console.dir(data)
+//         console.log(data)
+//     })
+// }
 
 $("#signUpButton").click((e) => {
      e.preventDefault()
@@ -107,12 +107,28 @@ function deleteUser(){
     }
 }
 
-$("#logout").click((e) => {
+$("#logoutButton").click((e) => {
     e.preventDefault()
     $("#homepage").show()
     $("#dashboard").hide()
     $("#sign-up").hide()
     $("#sign-in").hide()
+})
+
+$("#home-sign-up").click((e) => {
+    e.preventDefault()
+    $("#homepage").hide()
+    $("#dashboard").hide()
+    $("#sign-up").show()
+    $("#sign-in").hide()
+})
+
+$("#home-sign-in").click((e) => {
+    e.preventDefault()
+    $("#homepage").hide()
+    $("#dashboard").hide()
+    $("#sign-up").hide()
+    $("#sign-in").show()
 })
 
 function postTweet(){
