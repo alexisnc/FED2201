@@ -89,9 +89,9 @@ function signUpUser(){
 }
 
 function resetSignUp(){
-    signUpNameInput.val() = '';
-    signUpEmailInput.val() = '';
-    signUpEmailInput.val() = '';
+    signUpNameInput.val("");
+    signUpEmailInput.val("");
+    signUpEmailInput.val("");
 }
 
 $("#signUpButton").click((e) => {
