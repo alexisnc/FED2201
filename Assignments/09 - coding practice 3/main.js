@@ -16,6 +16,7 @@ $(document).ready( () => {
     $("#fromToday").click( (e) => {
         e.preventDefault()
         daysUntil2030()
+        dateInput.val(" ")
     })
     
     //set the parameters to the input values
