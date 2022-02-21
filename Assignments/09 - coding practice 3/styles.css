@@ -3,4 +3,27 @@
 body{
     font-family: 'Quicksand', sans-serif;
     background-color: pink;
+    margin: 20px;
+}
+
+.codingChallenge{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ width: 1000px;
+ height: 800px;
+}
+
+#numberDays, #fromToday{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    /* background-color: powderblue; */
+}
+
+p{
+   margin: 10px; 
+}
+
+a:hover{
+    color: green;
 }
