@@ -16,6 +16,7 @@ $(document).ready( () => {
     $("#fromToday").click( (e) => {
         e.preventDefault()
         daysUntil2030()
+        $(".2030Countdown").after(`<p>There are ${daysFrom2030} days until 2030. </p>`)
         dateInput.val(" ")
     })
     
