@@ -6,7 +6,17 @@ $(document).ready( () => {
 
     function daysUntil2030(date){
         //create function that shows difference between 1/1/2030
+        year2030 = new Date ("1/1/2030").getTime()
+        date = new Date(dateInput.val()).getTime()
+        dateDifference = Math.abs(year2030 - date)
+        daysFrom2030 = parseInt(dateDifference / (1000 * 3600 * 24)) 
+        // console.log(`There are ${daysFrom2030} days until 2030 ${year2030} date: ${date} date: ${dateDifference}`)
     }
+
+    $("#fromToday").click( (e) => {
+        e.preventDefault()
+        daysUntil2030()
+    })
     
     //set the parameters to the input values
     date1 = $("#date1")
@@ -23,7 +33,7 @@ $(document).ready( () => {
         // if( dayDifference < 0 ){
         //     return dayDifference * -1
         // } 
-        console.log(`difference: ${dayDifference} day 2: `)
+        // console.log(`difference: ${dayDifference} day 2: `)
         
     }
     //create button that will make days appear
@@ -34,5 +44,6 @@ $(document).ready( () => {
         date1.val(" ")
         date2.val(" ")
     })
+
     
 })
