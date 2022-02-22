@@ -39,15 +39,16 @@ h1{
     
 }
 
-.list{
-    
+/* .list{
+    border-bottom: solid 1px;
     background-color: hsl(235, 24%, 19%);
-}
+} */
 
 .newTask{
     display: flex;
     background-color: hsl(235, 24%, 19%);
     padding: 20px;
+    border-radius: 5px;
 }
 
 .button{
@@ -55,4 +56,26 @@ h1{
     border:none;
     margin:0;
     padding:5px;
+}
+
+.toDoItem input[type="checkbox"]:checked{ 
+    background-color: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
+    border-radius: 50%;
+}
+/* .toDoItem:checked{
+    background-color: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
+} */
+
+.newTask input[type="text"]{
+    background: transparent;
+}
+
+.mainBottom{
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+}
+
+ul li{
+    padding: 10px;
+    border-bottom: solid 1px;
 }
