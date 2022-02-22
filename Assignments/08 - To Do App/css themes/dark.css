@@ -15,34 +15,33 @@ h1{
 }
 
 
+
  header{
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     justify-content: space-between; 
     /* align-items: center; */
     width: 550px;
-    margin-left: 10px;
-    margin-right: 10px;
 } 
 
-/* .main, .mainBottom, .list{
+ .main, .mainBottom, .bottomRow, .newTask, header, .toDoItem, .filter, .list, .clearButton{
     display: flex;
-} */
+} 
 .main{
-    display: flex; 
+    
     flex-direction: column;
     justify-content: center;
-    align-content: center; 
-     /* align-items: center;  */
+    align-content: center;  
+      /* align-items: center;   */
     width: 550px;
     /* margin: 0 auto; */   
 } 
 
 .bottomRow{
-    display:flex;
+    
     flex-direction: row;
     background-color: hsl(235, 24%, 19%);
-    align-content: space-between;
+    align-items:center;
 }
 
 /* .list{
@@ -51,7 +50,7 @@ h1{
 } */
 
 .newTask{
-    display: flex;
+    
     background-color: hsl(235, 24%, 19%);
     padding: 20px;
     border-radius: 5px;
@@ -71,48 +70,38 @@ h1{
     background-color: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
     border-radius: 50%;
 }
-/* .toDoItem:checked{
-    background-color: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
-} */
 
-.newTask input[type="text"]{
-    background: transparent;
-}
+
 
 .mainBottom{
     background-color: hsl(235, 24%, 19%);
     border-radius: 5px;
-}
-
-ul li{
-    padding: 10px;
-    border-bottom: solid 1px;
-    margin-left: 0px;
-}
-
-.container input:checked ~ .checkmark {
-    background-color: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
+    /* display: flex; */
+    width: 550px;
+    flex-direction: column;
 }
 
 .filter{
-    display:flex;
+    /* display:flex; */
     justify-content: center;
 
 }
 
 .clearButton{
+    /* display:flex; */
     background:none;
     border:none;
     margin:0;
     padding:5px;
     color: hsl(233, 11%, 52%);
+    flex-direction: row;
     justify-content: flex-end;
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 p{
-    display:flex;
+    /* display:flex; */
     justify-content: flex-start;
     color: hsl(233, 11%, 52%); 
     font-size: 16px;
@@ -141,5 +130,44 @@ p{
     background: #eee;
     border-radius: 50%;
 }
+
+.toDoItem{
+    /* display:flex; */
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: solid 1px;
+    margin-left: 0px;
+    align-items:center;
+    justify-content: space-between;
+}
+
+/* .toDoItem .cross{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+} */
+
+.bottomRow{
+    align-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list{
+    flex-direction: column;
+}
+
+.items{
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.check{
+    margin-left: 0px;
+}
+
+
+
+
 
 
