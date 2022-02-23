@@ -46,7 +46,7 @@ function addToDo(){
         todoDiv.remove();
         console.log(`${todoText}`)
     })
-    let check = $("todoDiv .check");
+    let check = $(".check");
     check.click( () => {
         check.toggleClass("active-check")
         todoDiv.children[0].children[1].addClass("complete")

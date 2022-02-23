@@ -37,12 +37,10 @@ h1{
     flex-direction: row;
     justify-content: space-between; 
      align-items: center; 
-    width: 550px; 
 } 
 
 .text{
     background: transparent;
-    width: 550px;
     font-size: 18px;
     height: 20px;
     border-style: none;
@@ -56,7 +54,7 @@ h1{
 .main{
     
     flex-direction: column;
-     justify-content: center; 
+    justify-content: center; 
     align-content:center;  
 
     width: 550px;
@@ -102,8 +100,6 @@ h1{
 .mainBottom{
     background-color: var(--todo-bg);
     border-radius: 5px;
-    
-    width: 550px;
     flex-direction: column;
 }
 
@@ -251,19 +247,29 @@ p{
     background: url(../images/icon-moon.svg);
 }
 
+.mobile{
+    display: none;
+}
+
 @media(max-width: 375px){
 
-    .main{
-        width:365px;
-        margin: 5px;
+    body{
+        width:375px;
+        margin: 10px;
     }
-    
+    .main{
+        width:355px;
+    }
+
     .mobile{
         display: flex;
+        justify-content: center;
         align-items: center;
         width: 365px;
-        height: 20px;
+        height: 40px;
         border-radius: 5px;
+        background-color: var(--todo-bg);
+        margin-top: 15px;
     }
 
     .filter{
