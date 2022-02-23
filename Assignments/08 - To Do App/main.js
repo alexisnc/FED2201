@@ -4,7 +4,7 @@ $(document).ready( () => {
 var text = $("#text")
 //variable for form
 var form = $("#newTask")
-var work = $("#work")
+
 
 
 
@@ -43,8 +43,9 @@ function addToDo(){
     })
     let check = $(".check");
     check.click( () => {
-        todoDiv.toggleClass(".active-check")
-        todoDiv.children[0].children[1].addClass("completed")
+        todoDiv.toggleClass("active-check")
+        todoDiv.children[0].children[1].addClass("complete")
+        alert("clicked")
     })
 
 
@@ -55,8 +56,6 @@ form.submit( (e)=> {
     addToDo();
     text.val(" ")
 })
-
-
 
 
 
