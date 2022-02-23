@@ -1,5 +1,10 @@
 $(document).ready( () => {
 
+const theme = $("#theme");
+
+theme.click( (e) => {
+    $(".theme-dark").toggleClass("theme-light")
+})
  //variable for input box   
 var text = $("#text")
 //variable for form
@@ -41,9 +46,9 @@ function addToDo(){
         todoDiv.remove();
         console.log(`${todoText}`)
     })
-    let check = $(".check");
+    let check = $("todoDiv .check");
     check.click( () => {
-        todoDiv.toggleClass("active-check")
+        check.toggleClass("active-check")
         todoDiv.children[0].children[1].addClass("complete")
         alert("clicked")
     })
