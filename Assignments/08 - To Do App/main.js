@@ -4,24 +4,59 @@ $(document).ready( () => {
 var text = $("#text")
 //variable for form
 var form = $("#newTask")
+var work = $("#work")
+
+
+
+// work.click( (e) => {
+//     e.preventDefault();
+//     addToDo();
+//     console.log(`here is ${todoText}`)
+//     alert("You submitted")
+// })
+
+// const  = document.querySelector('submit-image')
+// image.addEventListener('click', function(clickEvent) {
+//   const domEvent = document.createEvent('Event')
+//   domEvent.initEvent('submit', false, true)
+//   clickEvent.target.closest('form').dispatchEvent(domEvent)
+// })
 
 
 function addToDo(){
+    //creating a div to hold todo item
+    let todoDiv = document.createElement("div");
     //setting variable for input value
     let todoText = text.val();
-    //adding new div to list div with the input text
-    $("#list").append(`<div class="toDoItem">
+    //putting the html into div element
+    todoDiv.innerHTML = `<div class="toDoItem">
     <div class="check"><img src="./images/icon-check.svg"></div>
     <p class="items">${todoText}</p>
     <div class="cross"><img src="./images/icon-cross.svg"></div>
-</div>  `)
+</div>  `
+    //adding new div to list div with the input text
+    $("#list").append(todoDiv)
+    let cross = $(".cross");
+    cross.click( () => {
+        todoDiv.remove();
+        console.log(`${todoText}`)
+    })
+    let check = $(".check");
+    check.click( () => {
+        todoDiv.toggleClass(".active-check")
+        todoDiv.children[0].children[1].addClass("completed")
+    })
+
+
 }
 
-form.addEventListener('submit', (e)=> {
+form.submit( (e)=> {
     e.preventDefault();
     addToDo();
-    console.log(`here is ${todoText}`)
+    text.val(" ")
 })
+
+
 
 
 
