@@ -31,6 +31,7 @@ h1{
     font-size: 18px;
     height: 20px;
     border-style: none;
+    color:hsl(234, 39%, 85%)
 }
 
 
@@ -126,7 +127,7 @@ p{
 
 /* Checkbox */
 .container input:checked ~ .checkmark {
-    background-color: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
+    background: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
 }
 
 /*hide default checkbox */
@@ -193,6 +194,19 @@ p{
     display: grid;
     place-content: center;
     cursor: pointer;
+}
+
+.check img{
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.active-check{
+    background: linear-gradient(hsl(192,100%,67%), hsl(280, 87%, 65%));
+}
+
+.active-check img{
+    transform: scale(1)
 }
 
 
