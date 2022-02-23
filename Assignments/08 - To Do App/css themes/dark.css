@@ -12,19 +12,25 @@ body{
 h1{
     font-weight: 700;
     color: white;
+    letter-spacing: 10px;
 }
 
 
-
  header{
-    /* display: flex; */
+    
     flex-direction: row;
     justify-content: space-between; 
-    /* align-items: center; */
-    width: 550px;
+     align-items: center; 
+    width: 550px; 
 } 
 
- .main, .mainBottom, .bottomRow, .newTask, header, .toDoItem, .filter, .list, .clearButton{
+.text{
+    background: transparent;
+    width: 550px;
+}
+
+
+ .main, .mainBottom, .bottomRow, .newTask, header, .toDoItem, .filter, .list, .clearButton, header{
     display: flex;
 } 
 .main{
@@ -34,7 +40,7 @@ h1{
     align-content:center;  
 
     width: 550px;
-    /* margin: 0 auto; */   
+    margin: 0 auto;    
 } 
 
 .bottomRow{
@@ -76,7 +82,7 @@ h1{
 .mainBottom{
     background-color: hsl(235, 24%, 19%);
     border-radius: 5px;
-    /* display: flex; */
+    
     width: 550px;
     flex-direction: column;
 }
