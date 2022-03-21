@@ -1,9 +1,19 @@
 
 
+section{
+    display:flex;
+    margin: 20px
+}
 app-lightbox{
-    display:flex
+    display:flex;
+    width: 700px;
+    justify-content: flex-start;
+    margin: 15px;
 }
 
 app-product-details{
-    display:flex
+    display:flex;
+    width: 700px;
+    justify-content: flex-start;
+    margin:15px;
 }
