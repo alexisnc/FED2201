@@ -11,5 +11,5 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+    price = '15';
 }
