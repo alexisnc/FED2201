@@ -12,7 +12,7 @@ class Banner extends React.Component {
     return(
         <div className="main-background">
             <div>
-                <img>Romace 101</img>
+                <figure>Romace 101</figure>
             </div>
             <div>
                 <p>Make comics, reach millions</p>

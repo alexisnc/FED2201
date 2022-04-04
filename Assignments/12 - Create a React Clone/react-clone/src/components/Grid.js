@@ -7,16 +7,16 @@ function Grid (){
                 
             </nav>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
+                <li className='card-item'></li>
             </ul>
         </div>
     )

@@ -1,0 +1,28 @@
+/* .top-section{
+    display:flex;
+    flex-direction: row;
+} */
+
+.header{
+    display:flex;
+    justify-content: space-between; 
+    
+}
+
+nav{
+    display:flex;
+    justify-content:flex-start
+}
+
+.right-section{
+    display:flex;
+    justify-content: space-around
+}
+
+a{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+
