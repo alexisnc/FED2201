@@ -1,6 +1,14 @@
 import React from "react";
 
-function Banner () {
+class Banner extends React.Component {
+    constructor(){
+        super()
+        this.state = {
+
+        }
+    } 
+
+ render(){
     return(
         <div className="main-background">
             <div>
@@ -18,3 +26,6 @@ function Banner () {
         </div>
     )
 }
+}
+
+export default Banner 

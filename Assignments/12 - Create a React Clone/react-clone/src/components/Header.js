@@ -14,10 +14,10 @@ class Header extends React.Component {
            <div>
                 <header>
                     <nav>
-                        <Link>ORIGINALS</Link>
-                        <Link>GENRES</Link>
-                        <Link>POPULAR</Link>
-                        <Link>CANVAS</Link>
+                        <a>ORIGINALS</a>
+                        <a>GENRES</a>
+                        <a>POPULAR</a>
+                        <a>CANVAS</a>
                     </nav>
 
                     <div>
