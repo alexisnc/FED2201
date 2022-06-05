@@ -1,0 +1,10 @@
+.click-displays, .buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-counter {
+    border: black solid 3px;
+    padding: 1%;
+    margin: 1%;
+}

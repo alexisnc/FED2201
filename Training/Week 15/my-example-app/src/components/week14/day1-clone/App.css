@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap');
+
+body {
+    background-image: url(http://i.imgur.com/Dh1OKT9.jpg);
+    background-size: 100%;
+}
+
+.main-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper, .main-section, .message-display{
+    margin: 5%;
+}
+
+.wrapper {
+    height: 100%;
+    width: 25%
+}
+
+.main-menu.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-option {
+    color: steelblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: .5px black;
+    text-transform: capitalize;
+    font-size: 35px;
+    margin: 1%;
+}
+
+.menu-option:hover {
+    color: goldenrod;
+}
+
+.robotic {
+    font-family: Glory;
+    color: lightblue;
+    /* -webkit-text-stroke: .1px black; */
+    text-shadow: 2px 2px black;
+}
